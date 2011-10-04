@@ -1,0 +1,11 @@
+<package project="Mer:Trunk:Base" name="gzip">
+  <title>The GNU data compression program</title>
+  <description>The gzip package contains the popular GNU gzip data compression
+program. Gzipped files have a .gz extension.
+
+Gzip should be installed on your system, because it is a
+very commonly used data compression program.
+
+</description>
+  <url>http://www.gzip.org/</url>
+</package>

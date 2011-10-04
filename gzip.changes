@@ -1,0 +1,27 @@
+* Wed Aug 24 2011 Carsten Munk <carsten@maemo.org> - 1.3.14
+- Added gzip-1.3.14-notimestamping.patch to make gzip builds
+  be similar across time, saving on OBS rebuilds.
+
+* Sun Jun 26 2011 Anas Nashif <anas.nashif@intel.com> - 1.3.14
+- Do not require install-info
+
+* Tue May 24 2011 Anas Nashif <anas.nashif@intel.com> - 1.3.14
+- Repackage documentaion/translations
+
+* Wed Dec 29 2010 Yan Li <yan.i.li@intel.com> - 1.3.14
+- Use spectacle, package zless as a separate package (BMC#11589)
+
+* Mon Feb 01 2010 Yi Yang <yi.y.yang@intel.com> - 1.3.14
+- Update to 1.3.14
+
+* Mon Jan 25 2010 Passion Zhao <passion.zhao@intel.com> - 1.3.12-2
+- Add fix for cve-2010-0001: Integer underflow by decompressing LZW format files
+
+* Wed Apr 01 2009 Arjan van de Ven <arjan@linux.intel.com> 1.3.12
+- reenable the assembly code again
+
+* Sun Oct 05 2008 Anas Nashif <anas.nashif@intel.com> 1.3.12
+- require binaries directly, not packages
+
+* Fri Sep 12 2008 Yi Yang <yi.y.yang@intel.com> 1.3.12
+- Reomve installation warnings of info files
