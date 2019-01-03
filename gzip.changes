@@ -1,3 +1,6 @@
+* Thu Jan 3 2019 Tomi Leppänen <tomi.leppanen@jolla.com> - 1.5-2
+- [packaging] Rename gzip-docs to gzip-doc. Contributes to JB#38578
+
 * Thu Dec 6 2012 Islam Amer <islam.amer@jollamobile.com> - 1.5
 - Update to latest upstream
 - Remove patches applied upstream and fix the rest
