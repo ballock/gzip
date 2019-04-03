@@ -1,19 +1,13 @@
 Name:       gzip
 Summary:    The GNU data compression program
-Version:    1.5
-Release:    2
+Version:    1.9
+Release:    1
 Group:      Applications/File
 License:    GPLv3 and GFDL
 URL:        http://www.gzip.org/
-Source0:    ftp://alpha.gnu.org/gnu/gzip/gzip-%{version}.tar.gz
-Patch0:     gzip-1.3.12-openbsd-owl-tmp.patch
-Patch1:     gzip-1.3.5-zforce.patch
-Patch2:     gzip-1.3.10-zgreppipe.patch
-Patch3:     gzip-1.3.14-notimestamping.patch
-Patch4:     gzip-1.5-stderr.patch
-Patch5:     gzip-1.5-addsuffix.patch
-Patch6:     gzip-1.5-cve-2006-4338.patch
-Patch7:     gzip-1.5-cve-2006-4337.patch
+Source0:    ftp://alpha.gnu.org/gnu/gzip/gzip-%{version}.tar.xz
+Patch1: gnulib.patch
+Patch2: gzexe.patch
 Requires:   /bin/mktemp
 BuildRequires:  texinfo
 
@@ -53,22 +47,9 @@ Man and info pages for %{name}.
 %prep
 %setup -q -n %{name}-%{version}
 
-# gzip-1.3.12-openbsd-owl-tmp.patch
-%patch0 -p1
-# gzip-1.3.5-zforce.patch
-%patch1 -p1
-# gzip-1.3.10-zgreppipe.patch
-%patch2 -p1
-# gzip-1.3.14-notimestamping.patch
-%patch3 -p1
-# gzip-1.5-stderr.patch
-%patch4 -p1
-# gzip-1.5-addsuffix.patch
-%patch5 -p1
-# gzip-1.5-cve-2006-4338.patch
-%patch6 -p1
-# gzip-1.5-cve-2006-4337.patch
-%patch7 -p1
+%patch1 -p1 -b .gnulib
+%patch2 -p1 -b .gzexe
+autoreconf
 
 %build
 export CPPFLAGS="-DHAVE_LSTAT"
