@@ -9,7 +9,6 @@ Source0:    ftp://alpha.gnu.org/gnu/gzip/gzip-%{version}.tar.xz
 Patch1: gnulib.patch
 Patch2: gzexe.patch
 Requires:   /bin/mktemp
-BuildRequires:  texinfo
 
 %description
 The gzip package contains the popular GNU gzip data compression
