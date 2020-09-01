@@ -1,4 +1,4 @@
-%global gzipver 1.9
+%global gzipver 1.10
 
 Name:       gnu-gzip
 Summary:    The GNU data compression program
@@ -7,8 +7,7 @@ Release:    1
 License:    GPLv3+ and GFDL
 URL:        http://www.gzip.org/
 Source0:    gzip-%{gzipver}.tar.xz
-Patch1:     gnulib.patch
-Patch2:     gzexe.patch
+Patch1:     gzexe.patch
 Requires:   /bin/mktemp
 Provides:   gzip = 1.9+git1
 Obsoletes:  gzip < 1.9+git1
