@@ -1,15 +1,17 @@
-Name:       gzip
+%global gzipver 1.9
+
+Name:       gnu-gzip
 Summary:    The GNU data compression program
-Version:    1.9
+Version:    %{gzipver}+git1
 Release:    1
-Group:      Applications/File
-License:    GPLv3 and GFDL
+License:    GPLv3+ and GFDL
 URL:        http://www.gzip.org/
-Source0:    ftp://alpha.gnu.org/gnu/gzip/gzip-%{version}.tar.xz
-Patch1: gnulib.patch
-Patch2: gzexe.patch
+Source0:    gzip-%{gzipver}.tar.xz
+Patch1:     gnulib.patch
+Patch2:     gzexe.patch
 Requires:   /bin/mktemp
-BuildRequires:  texinfo
+Provides:   gzip = 1.9+git1
+Obsoletes:  gzip < 1.9+git1
 
 %description
 The gzip package contains the popular GNU gzip data compression
@@ -21,8 +23,6 @@ very commonly used data compression program.
 
 %package -n zless
 Summary:    file perusal filter for crt viewing of compressed text
-License:    GPLv2
-Group:      Applications/File
 Requires:   %{name} = %{version}-%{release}
 Requires:   /usr/bin/less
 
@@ -36,7 +36,7 @@ having the command zless available is important to be worth providing it.
 
 %package doc
 Summary:   Documentation for %{name}
-Group:     Documentation
+BuildArch: noarch
 Requires:  %{name} = %{version}-%{release}
 Obsoletes: %{name}-docs
 
@@ -45,19 +45,15 @@ Man and info pages for %{name}.
 
 
 %prep
-%setup -q -n %{name}-%{version}
-
-%patch1 -p1 -b .gnulib
-%patch2 -p1 -b .gzexe
-autoreconf
+%autosetup -p1 -n gzip-%{gzipver}
 
 %build
 export CPPFLAGS="-DHAVE_LSTAT"
 
-%configure --disable-static \
+%reconfigure --disable-static \
     --bindir=/bin
 
-make %{?jobs:-j%jobs}
+%make_build
 
 
 %install
