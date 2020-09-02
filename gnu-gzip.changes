@@ -1,3 +1,10 @@
+* Tue Sep 01 2020 Matti Kosola <matti.kosola@jolla.com> - 1.10+git1
+- Update to 1.10 version. JB#49337
+
+* Tue Sep 01 2020 Matti Kosola <matti.kosola@jolla.com> - 1.9+git1
+- Rename gzip to gnu-gzip. JB#49337
+- Drop texinfo from build requires. JB#48964
+
 * Thu Mar 28 2019 Niels Breet <niels.breet@jolla.com> - 1.9
 - Update to gzip 1.9.
 - Add patch for glibc 2.28 libio.h removal. Contributes to JB#45154
