@@ -37,11 +37,11 @@
 * Mon Jan 25 2010 Passion Zhao <passion.zhao@intel.com> - 1.3.12-2
 - Add fix for cve-2010-0001: Integer underflow by decompressing LZW format files
 
-* Wed Apr 01 2009 Arjan van de Ven <arjan@linux.intel.com> 1.3.12
+* Wed Apr 01 2009 Arjan van de Ven <arjan@linux.intel.com> - 1.3.12
 - reenable the assembly code again
 
-* Sun Oct 05 2008 Anas Nashif <anas.nashif@intel.com> 1.3.12
+* Sun Oct 05 2008 Anas Nashif <anas.nashif@intel.com> - 1.3.12
 - require binaries directly, not packages
 
-* Fri Sep 12 2008 Yi Yang <yi.y.yang@intel.com> 1.3.12
+* Fri Sep 12 2008 Yi Yang <yi.y.yang@intel.com> - 1.3.12
 - Reomve installation warnings of info files
